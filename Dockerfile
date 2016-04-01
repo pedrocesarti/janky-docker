@@ -7,7 +7,7 @@ WORKDIR /app/janky
 EXPOSE 9292
 
 RUN apt-get update 
-RUN apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev libffi-dev libmysqlclient-dev && gem install bundler
+RUN apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev libffi-dev libmysqlclient-dev
 
 RUN apt-get install -y ruby ruby-dev && gem install bundler
 RUN git clone https://github.com/github/janky.git /app/janky
